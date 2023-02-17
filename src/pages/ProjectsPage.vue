@@ -1,9 +1,13 @@
 <template>
   <q-page class="row items-center justify-evenly">
-    Hello
-  </q-page>
+    Projects
+  </q-page >
 </template>
 
 <script setup lang="ts">
 
 </script>
+
+<style scoped>
+
+</style>
