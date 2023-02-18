@@ -1,7 +1,9 @@
 const routeNames = {
   home: 'Home',
+  profile: 'My profile',
   projects: 'My projects',
-  applications: 'My applications',
+  newProject: 'New project',
+  grants: 'My grants',
 };
 
 export default routeNames;

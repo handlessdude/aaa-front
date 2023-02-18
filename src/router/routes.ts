@@ -12,14 +12,24 @@ const routes: RouteRecordRaw[] = [
         component: () => import('pages/IndexPage.vue')
       },
       {
-        name: routeNames.projects,
-        path: 'projects',
-        component: () => import('pages/ProjectsPage.vue')
+        name: routeNames.profile,
+        path: 'profile',
+        component: () => import('pages/ProfilePage.vue')
       },
       {
-        name: routeNames.applications,
-        path: 'applications',
-        component: () => import('pages/ApplicationsPage.vue')
+        name: routeNames.projects,
+        path: 'projects',
+        component: () => import('pages/projects/ProjectsPage.vue')
+      },
+      {
+        name: routeNames.newProject,
+        path: 'new-project',
+        component: () => import('pages/projects/ProjectCreationPage.vue')
+      },
+      {
+        name: routeNames.grants,
+        path: 'grants',
+        component: () => import('pages/GrantsPage.vue')
       },
     ],
   },

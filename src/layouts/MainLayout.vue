@@ -4,7 +4,8 @@
       elevated
       class="gradient"
     >
-      <q-toolbar>
+      <q-toolbar
+        class="q-pa-sm row justify-between">
         <q-btn
           flat
           dense
@@ -16,12 +17,27 @@
         <q-toolbar-title>
          {{ route.name }}
         </q-toolbar-title>
+        <q-input
+          v-model="query"
+          outlined
+          dense
+          color="grey-8"
+          bg-color="white"
+          label="Search..."
+          debounce="300"
+          class="q-mr-md"
+        >
+          <template v-slot:prepend>
+            <q-icon name="search" />
+          </template>
+        </q-input>
       </q-toolbar>
     </q-header>
     <q-drawer
       v-model="leftDrawerOpen"
       show-if-above
       bordered
+      behavior="desktop"
     >
       <q-list>
         <q-item-label header class="text-h6 text-weight-light">
@@ -41,11 +57,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, Ref, watch } from 'vue';
 import EssentialLink from 'components/EssentialLink.vue';
 import { essentialLinks } from 'layouts/resources';
 import {useRoute} from 'vue-router'
 const route = useRoute();
+
+const query : Ref<string> = ref('');
+watch( () => query.value, (newQuery) => {
+  if(!newQuery) return;
+  console.log(newQuery);
+})
 
 const leftDrawerOpen = ref(false)
 const toggleLeftDrawer = () => {

@@ -13,14 +13,19 @@ const essentialLinks: Link[] = [
     routeName: routeNames.home,
   },
   {
+    title: 'Profile',
+    icon: 'person',
+    routeName: routeNames.profile,
+  },
+  {
     title: 'Projects',
     icon: 'work',
     routeName: routeNames.projects,
   },
   {
-    title: 'Applications',
+    title: 'Grants',
     icon: 'chat',
-    routeName: routeNames.applications,
+    routeName: routeNames.grants,
   },
 ];
 export {
