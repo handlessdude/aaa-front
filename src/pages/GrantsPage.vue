@@ -34,6 +34,32 @@ const loadGrants = async () => {
   grantsLoading.value = true;
   try {
     grants.value = await grantService.getGrants1();
+    // grants.value = [
+    //   {
+    //     'id': 1,
+    //     'name': 'Grant 1',
+    //     'type': 'Type A',
+    //     'amount': 10000,
+    //     'region': 'Region 1',
+    //     'scale': 'Small'
+    //   },
+    //   {
+    //     'id': 2,
+    //     'name': 'Grant 2',
+    //     'type': 'Type B',
+    //     'amount': 20000,
+    //     'region': 'Region 2',
+    //     'scale': 'Medium'
+    //   },
+    //   {
+    //     'id': 4,
+    //     'name': 'Grant 4',
+    //     'type': 'Type A',
+    //     'amount': 15000,
+    //     'region': 'Region 1',
+    //     'scale': 'Medium'
+    //   }
+    // ];
   } catch (error) {
     console.log(error);
     $q.notify({

@@ -4,7 +4,7 @@
       <label class="text-h6">{{ grant.name }}</label>
     </q-card-section>
     <q-separator class="q-my-sm"/>
-    <div class="q-col-gutter-md grid-container">
+    <div class="q-col-gutter-md grid-container q-pa-md">
       <div class="row q-col-gutter-md items-center">
         <div class="text-h7"><q-icon name="category"/> Type</div>
         <div class="text-grey-8">{{ grant.type }}</div>
@@ -40,5 +40,8 @@ defineProps<GrantCardProps>();
 </script>
 
 <style scoped>
-
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 </style>
